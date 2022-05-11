@@ -59,6 +59,7 @@ plot(net_23_1_simp,
 
 
 ## Repeat the process above, but only indcluding mentions as edges.
+## This plot is included in the Results section of the paper as Figure 1.
 net_23_2 <- network_graph(timelines_23_1, .e = "mention")
 net_23_2_simp <- igraph::simplify(net_23_2, remove.loops = T, remove.multiple = T)
 btwn_23_2_simp <- betweenness(net_23_2_simp, directed=T, weights=NA)
